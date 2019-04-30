@@ -199,10 +199,12 @@ function secretNumber() {
 */
 
 function timeOutCounter() {
-  for (let i = 0; i <= 5; i++) {
-    setTimeout(function() {
-      console.log(i);
-    }, i * 1000);
+  for (var i = 0; i <= 5; i++) {
+    (function(e) {
+      setTimeout(function() {
+      console.log(e);
+    }, i * 1000)
+  })(i);
   }
 }
 timeOutCounter();
